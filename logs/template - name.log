@@ -1,30 +1,15 @@
-2022-11-07 14:05:16,573 ERROR: Exception on /favicon.ico [GET] [in C:\Users\Jai\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py:1741]
-Traceback (most recent call last):
-  File "C:\Users\Jai\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "C:\Users\Jai\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1785, in dispatch_request
-    self.raise_routing_exception(req)
-  File "C:\Users\Jai\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1767, in raise_routing_exception
-    raise request.routing_exception  # type: ignore
-  File "C:\Users\Jai\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\ctx.py", line 351, in match_request
-    result = self.url_adapter.match(return_rule=True)  # type: ignore
-  File "C:\Users\Jai\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\routing\map.py", line 624, in match
-    raise NotFound() from None
-werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
-
-During handling of the above exception, another exception occurred:
-
+2022-11-07 15:48:50,537 ERROR: Exception on /index [GET] [in C:\Users\Jai\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py:1741]
 Traceback (most recent call last):
   File "C:\Users\Jai\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 2525, in wsgi_app
     response = self.full_dispatch_request()
   File "C:\Users\Jai\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
     rv = self.handle_user_exception(e)
-  File "C:\Users\Jai\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1666, in handle_user_exception
-    return self.handle_http_exception(e)
-  File "C:\Users\Jai\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1606, in handle_http_exception
-    return self.ensure_sync(handler)(e)
-  File "C:\Users\Jai\Downloads\App3_Scrum_080222\App3_Scrum_080222\app\errors\handlers.py", line 8, in not_found_error
-    return render_template('errors/404.html'), 404
+  File "C:\Users\Jai\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Jai\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\Jai\Desktop\Project Management Y2 (2022-23) - Assignment\ProjectManagementY2-2223\app\main\routes.py", line 9, in index
+    return render_template('index.html',  title='Home')
   File "C:\Users\Jai\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\templating.py", line 147, in render_template
     return _render(app, template, context)
   File "C:\Users\Jai\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\templating.py", line 130, in _render
@@ -33,13 +18,20 @@ Traceback (most recent call last):
     self.environment.handle_exception()
   File "C:\Users\Jai\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 936, in handle_exception
     raise rewrite_traceback_stack(source=source)
-  File "C:\Users\Jai\Downloads\App3_Scrum_080222\App3_Scrum_080222\app\templates\errors\404.html", line 1, in top-level template code
+  File "C:\Users\Jai\Desktop\Project Management Y2 (2022-23) - Assignment\ProjectManagementY2-2223\app\templates\index.html", line 1, in top-level template code
     {% extends "base.html" %}
-  File "C:\Users\Jai\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 936, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "C:\Users\Jai\Downloads\App3_Scrum_080222\App3_Scrum_080222\app\templates\base.html", line 27, in template
-    {%end if%}
-jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'end'. Jinja was looking for the following tags: 'endif'. The innermost block that needs to be closed is 'if'.
-2022-11-07 14:05:55,092 INFO: Template - Name startup [in C:\Users\Jai\Downloads\App3_Scrum_080222\App3_Scrum_080222\app\__init__.py:71]
-2022-11-07 14:21:41,292 INFO: Template - Name startup [in C:\Users\Jai\Downloads\App3_Scrum_080222\App3_Scrum_080222\app\__init__.py:71]
-2022-11-07 15:43:24,888 INFO: Template - Name startup [in C:\Users\Jai\Desktop\Project Management Y2 (2022-23) - Assignment\ProjectManagementY2-2223\app\__init__.py:71]
+  File "C:\Users\Jai\Desktop\Project Management Y2 (2022-23) - Assignment\ProjectManagementY2-2223\app\templates\base.html", line 1, in top-level template code
+    {% extends "bootstrap/base.html" %}
+  File "C:\Users\Jai\AppData\Local\Programs\Python\Python310\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "C:\Users\Jai\AppData\Local\Programs\Python\Python310\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 4, in block 'doc'
+    {%- block html %}
+  File "C:\Users\Jai\AppData\Local\Programs\Python\Python310\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 20, in block 'html'
+    {% block body -%}
+  File "C:\Users\Jai\AppData\Local\Programs\Python\Python310\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 21, in block 'body'
+    {% block navbar %}
+  File "C:\Users\Jai\Desktop\Project Management Y2 (2022-23) - Assignment\ProjectManagementY2-2223\app\templates\base.html", line 33, in block 'navbar'
+    <li><a href="/logout" >Logout</a></li>
+  File "C:\Users\Jai\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 485, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'auth' is undefined
