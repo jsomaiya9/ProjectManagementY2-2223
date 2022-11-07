@@ -7,6 +7,7 @@ from flask_login import LoginManager
 from flask_bootstrap import Bootstrap
 from flask_sqlalchemy import SQLAlchemy
 from logging.handlers import SMTPHandler, RotatingFileHandler
+import os
 
 mail = Mail()
 db = SQLAlchemy()

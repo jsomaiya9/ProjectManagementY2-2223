@@ -42,3 +42,4 @@ Traceback (most recent call last):
 jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'end'. Jinja was looking for the following tags: 'endif'. The innermost block that needs to be closed is 'if'.
 2022-11-07 14:05:55,092 INFO: Template - Name startup [in C:\Users\Jai\Downloads\App3_Scrum_080222\App3_Scrum_080222\app\__init__.py:71]
 2022-11-07 14:21:41,292 INFO: Template - Name startup [in C:\Users\Jai\Downloads\App3_Scrum_080222\App3_Scrum_080222\app\__init__.py:71]
+2022-11-07 15:43:24,888 INFO: Template - Name startup [in C:\Users\Jai\Desktop\Project Management Y2 (2022-23) - Assignment\ProjectManagementY2-2223\app\__init__.py:71]
