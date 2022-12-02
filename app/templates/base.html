@@ -65,13 +65,22 @@
             {% endfor %}
         {% endif %}
     {% endwith %}
-
+    
     <div class="row">
         {# application content needs to be provided in the app_content block #}
         {% block app_content %}{% endblock %}
     </div>
-
+    <footer>
+        <li><a href="{{ url_for('main.products') }}" >products</a></li>
+        <li><a href="{{ url_for('main.aboutus') }}" >aboutus</a></li>
+    </footer>
+    
+        
+    
 </div>
+
+
+
 {% endblock %}
 
 {% block scripts %}
