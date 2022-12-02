@@ -17,3 +17,9 @@ def pricing():
 @main.route('/help')
 def help():
     return render_template('help.html', title="Help")
+@main.route('/account')
+def account():
+    return render_template('account.html', title="Account")
+@main.route('/contact')
+def contact():
+    return render_template('contact.html', title="Contact Us")
