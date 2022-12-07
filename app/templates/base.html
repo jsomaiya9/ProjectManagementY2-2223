@@ -1,6 +1,10 @@
 {% extends "bootstrap/base.html" %}
 {% block title %}
+<<<<<<< HEAD
     {{ title }} | Smart Intelligance Course
+=======
+    {{ title }} | Moodle!
+>>>>>>> 3dc5dedb3f7d3a3460e39ecb75400c2f973d7dc2
 {% endblock %}
 {% block styles %}
     {{ super() }}
@@ -19,8 +23,15 @@
             </button>
         </div>
         <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-left">
+                <li><a href="{{ url_for('main.index') }}" >
+                    <img src="Logo.PNG" alt="Logo" style="width:300px; margin:auto;"> 
+                </a></li>
+            </ul>
             <ul class="nav navbar-nav">
                 <li><a href="{{ url_for('main.index') }}" >Home</a></li>
+                <li><a href="{{ url_for('main.pricing') }}" >Pricing</a></li>
+                <li><a href="{{ url_for('main.help') }}" >Help</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 {% if current_user.is_authenticated %}
@@ -30,7 +41,8 @@
                             <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="/logout" >Logout</a></li>
+                            <li><a href="{{ url_for('main.account') }}" >Account</a></li>
+                            <li><a href="{{ url_for('auth.logout') }}" >Logout</a></li>
                         </ul>
                     </li>
                 {% else %}
@@ -57,14 +69,21 @@
             {% endfor %}
         {% endif %}
     {% endwith %}
-
+    
     <div class="row">
         {# application content needs to be provided in the app_content block #}
         {% block app_content %}{% endblock %}
     </div>
-
+    <footer>
+        <li><a href="{{ url_for('main.products') }}" >products</a></li>
+        <li><a href="{{ url_for('main.aboutus') }}" >aboutus</a></li>
+    </footer>
+    
+        
+    
 </div>
 
+<<<<<<< HEAD
 <!---- footer--> 
 <div class="footer">
     <link><a href="privacy_policy.html" > Privacy Policy</a></link>
@@ -73,6 +92,9 @@
     <link><a href="terms.html" > Terms</a></link>
     <link><a href="contact_us" > Contact Us</a></link>
 </div>
+=======
+
+>>>>>>> 3dc5dedb3f7d3a3460e39ecb75400c2f973d7dc2
 
 {% endblock %}
 
@@ -86,3 +108,6 @@
         }, 3000);
     </script>
 {% endblock %}
+<div class="footer"> 
+    <a href="{{ url_for('main.contact') }}" >Contact Us</a>
+</div>
