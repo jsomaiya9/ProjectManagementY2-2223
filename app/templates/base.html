@@ -28,6 +28,7 @@
                 <li><a href="{{ url_for('main.index') }}" >Home</a></li>
                 <li><a href="{{ url_for('main.pricing') }}" >Pricing</a></li>
                 <li><a href="{{ url_for('main.help') }}" >Help</a></li>
+                <li><a href="{{ url_for('main.newsannouncement') }}" >News and Annoucements</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 {% if current_user.is_authenticated %}

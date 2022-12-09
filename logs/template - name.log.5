@@ -1,46 +1,4 @@
-2022-11-15 14:45:16,244 ERROR: Exception on / [GET] [in /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py:1741]
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 1822, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 1820, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
-  File "/Users/badealaketu/Documents/Assignment/ProjectManagementY2-2223/app/main/routes.py", line 13, in index
-    return render_template('index.html',  title='Home')
-  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/templating.py", line 147, in render_template
-    return _render(app, template, context)
-  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/templating.py", line 130, in _render
-    rv = template.render(context)
-  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/jinja2/environment.py", line 1301, in render
-    self.environment.handle_exception()
-  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/jinja2/environment.py", line 936, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "/Users/badealaketu/Documents/Assignment/ProjectManagementY2-2223/app/templates/index.html", line 1, in top-level template code
-    {% extends "base.html" %}
-  File "/Users/badealaketu/Documents/Assignment/ProjectManagementY2-2223/app/templates/base.html", line 1, in top-level template code
-    {% extends "bootstrap/base.html" %}
-  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
-    {% block doc -%}
-  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block 'doc'
-    {%- block html %}
-  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block 'html'
-    {% block body -%}
-  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in block 'body'
-    {% block content -%}
-  File "/Users/badealaketu/Documents/Assignment/ProjectManagementY2-2223/app/templates/base.html", line 69, in block 'content'
-    <li><a href="{{ url_for('main.abous') }}" >products</a></li>
-  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 2031, in url_for
-    return self.handle_url_build_error(error, endpoint, values)
-  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 2020, in url_for
-    rv = url_adapter.build(  # type: ignore[union-attr]
-  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/werkzeug/routing/map.py", line 917, in build
-    raise BuildError(endpoint, values, method, self)
-werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'main.abous'. Did you mean 'main.products' instead?
-2022-11-18 14:27:09,705 INFO: Template - Name startup [in /Users/badealaketu/Documents/Assignment/ProjectManagementY2-2223/app/__init__.py:71]
-2022-11-18 14:27:13,545 ERROR: Exception on / [GET] [in /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py:1741]
+2022-11-18 15:03:08,067 ERROR: Exception on / [GET] [in /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py:1741]
 Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
     response = self.full_dispatch_request()
@@ -81,5 +39,62 @@ Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/werkzeug/routing/map.py", line 917, in build
     raise BuildError(endpoint, values, method, self)
 werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'main.aboutus'. Did you mean 'main.products' instead?
-2022-11-18 15:02:47,193 INFO: Template - Name startup [in /Users/badealaketu/Documents/Assignment/ProjectManagementY2-2223/app/__init__.py:71]
-2022-11-18 15:03:00,346 INFO: Template - Name startup [in /Users/badealaketu/Documents/Assignment/ProjectManagementY2-2223/app/__init__.py:71]
+2022-11-18 15:07:56,214 INFO: Template - Name startup [in /Users/badealaketu/Documents/Assignment/ProjectManagementY2-2223/app/__init__.py:71]
+2022-11-18 15:19:03,538 INFO: Template - Name startup [in /Users/badealaketu/Documents/Assignment/ProjectManagementY2-2223/app/__init__.py:71]
+2022-11-18 15:20:27,997 INFO: Template - Name startup [in /Users/badealaketu/Documents/Assignment/ProjectManagementY2-2223/app/__init__.py:71]
+2022-11-18 15:21:00,131 INFO: Template - Name startup [in /Users/badealaketu/Documents/Assignment/ProjectManagementY2-2223/app/__init__.py:71]
+2022-11-18 15:21:46,131 INFO: Template - Name startup [in /Users/badealaketu/Documents/Assignment/ProjectManagementY2-2223/app/__init__.py:71]
+2022-11-18 15:26:23,674 INFO: Template - Name startup [in /Users/badealaketu/Documents/Assignment/ProjectManagementY2-2223/app/__init__.py:71]
+2022-11-18 15:51:31,611 INFO: Template - Name startup [in /Users/badealaketu/Documents/Assignment/ProjectManagementY2-2223/app/__init__.py:71]
+2022-11-18 15:52:00,668 INFO: Template - Name startup [in /Users/badealaketu/Documents/Assignment/ProjectManagementY2-2223/app/__init__.py:71]
+2022-11-19 21:02:51,611 INFO: Template - Name startup [in /Users/badealaketu/Documents/Assignment/ProjectManagementY2-2223/app/__init__.py:71]
+2022-11-29 14:19:43,319 INFO: Template - Name startup [in /Users/badealaketu/Documents/Assignment/ProjectManagementY2-2223/app/__init__.py:71]
+2022-11-29 14:20:11,473 INFO: Template - Name startup [in /Users/badealaketu/Documents/Assignment/ProjectManagementY2-2223/app/__init__.py:71]
+2022-11-29 14:20:24,270 INFO: Template - Name startup [in /Users/badealaketu/Documents/Assignment/ProjectManagementY2-2223/app/__init__.py:71]
+2022-11-29 14:20:33,841 INFO: Template - Name startup [in /Users/badealaketu/Documents/Assignment/ProjectManagementY2-2223/app/__init__.py:71]
+2022-11-29 14:21:01,348 INFO: Template - Name startup [in /Users/badealaketu/Documents/Assignment/ProjectManagementY2-2223/app/__init__.py:71]
+2022-11-29 14:21:37,676 INFO: Template - Name startup [in /Users/badealaketu/Documents/Assignment/ProjectManagementY2-2223/app/__init__.py:71]
+2022-11-29 14:32:02,835 INFO: Template - Name startup [in /Users/badealaketu/Documents/Assignment/ProjectManagementY2-2223/app/__init__.py:71]
+2022-11-29 14:33:43,143 INFO: Template - Name startup [in /Users/badealaketu/Documents/Assignment/ProjectManagementY2-2223/app/__init__.py:71]
+2022-11-29 14:34:31,038 INFO: Template - Name startup [in /Users/badealaketu/Documents/Assignment/ProjectManagementY2-2223/app/__init__.py:71]
+2022-11-29 14:34:36,721 ERROR: Exception on / [GET] [in /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py:1741]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/badealaketu/Documents/Assignment/ProjectManagementY2-2223/app/main/routes.py", line 13, in index
+    return render_template('index.html',  title='Home')
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/badealaketu/Documents/Assignment/ProjectManagementY2-2223/app/templates/index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/badealaketu/Documents/Assignment/ProjectManagementY2-2223/app/templates/base.html", line 1, in top-level template code
+    {% extends "bootstrap/base.html" %}
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block 'doc'
+    {%- block html %}
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block 'html'
+    {% block body -%}
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in block 'body'
+    {% block content -%}
+  File "/Users/badealaketu/Documents/Assignment/ProjectManagementY2-2223/app/templates/base.html", line 69, in block 'content'
+    <li><a href="{{ url_for('main.aboutus') }}" >products</a></li>
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 2031, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 2020, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/werkzeug/routing/map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'main.aboutus'. Did you mean 'main.products' instead?
