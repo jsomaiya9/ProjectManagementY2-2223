@@ -77,3 +77,16 @@ Traceback (most recent call last):
   File "C:\Users\Jai\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 485, in getattr
     return getattr(obj, attribute)
 jinja2.exceptions.UndefinedError: 'auth' is undefined
+2022-12-02 15:09:58,395 INFO: Template - Name startup [in C:\Users\fayee\OneDrive\Desktop\Applied Computing Year 2\Project Management and Development\Assignment\ProjectManagementY2-2223\app\__init__.py:71]
+2022-12-02 15:10:23,237 INFO: Template - Name startup [in C:\Users\fayee\OneDrive\Desktop\Applied Computing Year 2\Project Management and Development\Assignment\ProjectManagementY2-2223\app\__init__.py:71]
+2022-12-02 15:11:10,917 INFO: Template - Name startup [in C:\Users\fayee\OneDrive\Desktop\Applied Computing Year 2\Project Management and Development\Assignment\ProjectManagementY2-2223\app\__init__.py:71]
+2022-12-02 15:12:38,216 INFO: Template - Name startup [in C:\Users\fayee\OneDrive\Desktop\Applied Computing Year 2\Project Management and Development\Assignment\ProjectManagementY2-2223\app\__init__.py:71]
+2022-12-02 15:13:55,287 INFO: Template - Name startup [in C:\Users\fayee\OneDrive\Desktop\Applied Computing Year 2\Project Management and Development\Assignment\ProjectManagementY2-2223\app\__init__.py:71]
+2022-12-02 15:14:27,632 INFO: Template - Name startup [in C:\Users\fayee\OneDrive\Desktop\Applied Computing Year 2\Project Management and Development\Assignment\ProjectManagementY2-2223\app\__init__.py:71]
+2022-12-02 15:14:39,517 INFO: Template - Name startup [in C:\Users\fayee\OneDrive\Desktop\Applied Computing Year 2\Project Management and Development\Assignment\ProjectManagementY2-2223\app\__init__.py:71]
+2022-12-02 16:23:41,906 INFO: Template - Name startup [in C:\Users\fayee\OneDrive\Desktop\Applied Computing Year 2\Project Management and Development\Assignment\ProjectManagementY2-2223\app\__init__.py:71]
+2022-12-02 16:24:44,810 INFO: Template - Name startup [in C:\Users\fayee\OneDrive\Desktop\Applied Computing Year 2\Project Management and Development\Assignment\ProjectManagementY2-2223\app\__init__.py:71]
+2022-12-02 16:24:49,609 INFO: Template - Name startup [in C:\Users\fayee\OneDrive\Desktop\Applied Computing Year 2\Project Management and Development\Assignment\ProjectManagementY2-2223\app\__init__.py:71]
+2022-12-02 16:39:57,413 INFO: Template - Name startup [in C:\Users\fayee\OneDrive\Desktop\Applied Computing Year 2\Project Management and Development\Assignment\ProjectManagementY2-2223\app\__init__.py:71]
+2022-12-09 14:38:48,733 INFO: Template - Name startup [in C:\Users\fayee\OneDrive\Desktop\Applied Computing Year 2\Project Management and Development\Assignment\ProjectManagementY2-2223\app\__init__.py:71]
+2022-12-09 14:41:25,117 INFO: Template - Name startup [in C:\Users\fayee\OneDrive\Desktop\Applied Computing Year 2\Project Management and Development\Assignment\ProjectManagementY2-2223\app\__init__.py:71]
