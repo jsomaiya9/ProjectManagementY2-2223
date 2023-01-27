@@ -25,13 +25,6 @@ class User(db.Model, TimestampMixin, UserMixin):
     first_name = db.Column(db.String(20), nullable=False)
     last_name = db.Column(db.String(20), nullable=False)
 
-class Modules (db.model):
-    module_code = db.Column(db.Integer, primary_key=True, nullable=False)
-    title = db.Column(db.String(50), nullable=False)
-    description = db.Column(db.String(200),nullable=False)
-    course_modules = db.relationship('CourseModule',backref = 'modules')
-
-
     # print to console username created
     def __repr__(self):
         return f'<User {self.username}>'
@@ -56,3 +49,13 @@ class Modules (db.model):
         except:
             return
         return User.query.get(id)
+
+
+
+class News (db.Model):
+    id = db.Column(db.Integer, primary_key=True, nullable = False)
+    title = db.Column(db.String(200), nullable=False)
+    caption = db.Column(db.String(200), nullable=False)
+    description = db.Column(db.String(500), nullable=False)
+    date = db.Column(db.DateTime(), default=datetime.utcnow())
+     

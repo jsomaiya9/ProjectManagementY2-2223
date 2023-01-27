@@ -81,3 +81,4 @@ Traceback (most recent call last):
     raise BuildError(endpoint, values, method, self)
 werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'main.newsannoucement.html'. Did you mean 'main.newsannouncement' instead?
 2022-12-09 14:23:45,139 INFO: Template - Name startup [in /Users/tomaszczuczwara/Desktop/Uni/Project Management and Development/Assignment/ProjectManagementY2-2223/app/__init__.py:71]
+2023-01-23 13:55:59,283 INFO: Template - Name startup [in /Users/tomaszczuczwara/Desktop/Uni/Project Management and Development/Assignment/ProjectManagementY2-2223/app/__init__.py:71]
