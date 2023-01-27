@@ -1,92 +1,15 @@
-2022-11-29 14:44:49,847 ERROR: Exception on / [GET] [in /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py:1741]
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 1822, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 1820, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
-  File "/Users/badealaketu/Documents/Assignment/ProjectManagementY2-2223/app/main/routes.py", line 13, in index
-    return render_template('index.html',  title='Home')
-  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/templating.py", line 147, in render_template
-    return _render(app, template, context)
-  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/templating.py", line 130, in _render
-    rv = template.render(context)
-  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/jinja2/environment.py", line 1301, in render
-    self.environment.handle_exception()
-  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/jinja2/environment.py", line 936, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "/Users/badealaketu/Documents/Assignment/ProjectManagementY2-2223/app/templates/index.html", line 1, in top-level template code
-    {% extends "base.html" %}
-  File "/Users/badealaketu/Documents/Assignment/ProjectManagementY2-2223/app/templates/base.html", line 1, in top-level template code
-    {% extends "bootstrap/base.html" %}
-  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
-    {% block doc -%}
-  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block 'doc'
-    {%- block html %}
-  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block 'html'
-    {% block body -%}
-  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in block 'body'
-    {% block content -%}
-  File "/Users/badealaketu/Documents/Assignment/ProjectManagementY2-2223/app/templates/base.html", line 67, in block 'content'
-    <!--<li><a href="{{ url_for('main.aboutus') }}" >aboutus</a></li> -->
-  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 2031, in url_for
-    return self.handle_url_build_error(error, endpoint, values)
-  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 2020, in url_for
-    rv = url_adapter.build(  # type: ignore[union-attr]
-  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/werkzeug/routing/map.py", line 917, in build
-    raise BuildError(endpoint, values, method, self)
-werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'main.aboutus'. Did you mean 'main.products' instead?
-2022-11-29 14:45:06,869 INFO: Template - Name startup [in /Users/badealaketu/Documents/Assignment/ProjectManagementY2-2223/app/__init__.py:71]
-2022-11-29 14:45:11,937 ERROR: Exception on / [GET] [in /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py:1741]
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 1822, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 1820, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
-  File "/Users/badealaketu/Documents/Assignment/ProjectManagementY2-2223/app/main/routes.py", line 13, in index
-    return render_template('index.html',  title='Home')
-  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/templating.py", line 147, in render_template
-    return _render(app, template, context)
-  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/templating.py", line 130, in _render
-    rv = template.render(context)
-  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/jinja2/environment.py", line 1301, in render
-    self.environment.handle_exception()
-  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/jinja2/environment.py", line 936, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "/Users/badealaketu/Documents/Assignment/ProjectManagementY2-2223/app/templates/index.html", line 1, in top-level template code
-    {% extends "base.html" %}
-  File "/Users/badealaketu/Documents/Assignment/ProjectManagementY2-2223/app/templates/base.html", line 1, in top-level template code
-    {% extends "bootstrap/base.html" %}
-  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
-    {% block doc -%}
-  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block 'doc'
-    {%- block html %}
-  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block 'html'
-    {% block body -%}
-  File "C:\Users\Jai\AppData\Local\Programs\Python\Python310\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 21, in block 'body'
-    {% block navbar %}
-  File "C:\Users\Jai\Desktop\Project Management Y2 (2022-23) - Assignment\ProjectManagementY2-2223\app\templates\base.html", line 33, in block 'navbar'
-    <li><a href="/logout" >Logout</a></li>
-  File "C:\Users\Jai\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 485, in getattr
-    return getattr(obj, attribute)
-jinja2.exceptions.UndefinedError: 'auth' is undefined
-2022-12-02 15:09:58,395 INFO: Template - Name startup [in C:\Users\fayee\OneDrive\Desktop\Applied Computing Year 2\Project Management and Development\Assignment\ProjectManagementY2-2223\app\__init__.py:71]
-2022-12-02 15:10:23,237 INFO: Template - Name startup [in C:\Users\fayee\OneDrive\Desktop\Applied Computing Year 2\Project Management and Development\Assignment\ProjectManagementY2-2223\app\__init__.py:71]
-2022-12-02 15:11:10,917 INFO: Template - Name startup [in C:\Users\fayee\OneDrive\Desktop\Applied Computing Year 2\Project Management and Development\Assignment\ProjectManagementY2-2223\app\__init__.py:71]
-2022-12-02 15:12:38,216 INFO: Template - Name startup [in C:\Users\fayee\OneDrive\Desktop\Applied Computing Year 2\Project Management and Development\Assignment\ProjectManagementY2-2223\app\__init__.py:71]
-2022-12-02 15:13:55,287 INFO: Template - Name startup [in C:\Users\fayee\OneDrive\Desktop\Applied Computing Year 2\Project Management and Development\Assignment\ProjectManagementY2-2223\app\__init__.py:71]
-2022-12-02 15:14:27,632 INFO: Template - Name startup [in C:\Users\fayee\OneDrive\Desktop\Applied Computing Year 2\Project Management and Development\Assignment\ProjectManagementY2-2223\app\__init__.py:71]
-2022-12-02 15:14:39,517 INFO: Template - Name startup [in C:\Users\fayee\OneDrive\Desktop\Applied Computing Year 2\Project Management and Development\Assignment\ProjectManagementY2-2223\app\__init__.py:71]
-2022-12-02 16:23:41,906 INFO: Template - Name startup [in C:\Users\fayee\OneDrive\Desktop\Applied Computing Year 2\Project Management and Development\Assignment\ProjectManagementY2-2223\app\__init__.py:71]
-2022-12-02 16:24:44,810 INFO: Template - Name startup [in C:\Users\fayee\OneDrive\Desktop\Applied Computing Year 2\Project Management and Development\Assignment\ProjectManagementY2-2223\app\__init__.py:71]
-2022-12-02 16:24:49,609 INFO: Template - Name startup [in C:\Users\fayee\OneDrive\Desktop\Applied Computing Year 2\Project Management and Development\Assignment\ProjectManagementY2-2223\app\__init__.py:71]
-2022-12-02 16:39:57,413 INFO: Template - Name startup [in C:\Users\fayee\OneDrive\Desktop\Applied Computing Year 2\Project Management and Development\Assignment\ProjectManagementY2-2223\app\__init__.py:71]
-2022-12-09 14:38:48,733 INFO: Template - Name startup [in C:\Users\fayee\OneDrive\Desktop\Applied Computing Year 2\Project Management and Development\Assignment\ProjectManagementY2-2223\app\__init__.py:71]
-2022-12-09 14:41:25,117 INFO: Template - Name startup [in C:\Users\fayee\OneDrive\Desktop\Applied Computing Year 2\Project Management and Development\Assignment\ProjectManagementY2-2223\app\__init__.py:71]
+2023-01-06 14:06:40,656 INFO: Template - Name startup [in C:\Users\fayee\OneDrive\Desktop\Applied Computing Year 2\Project Management and Development\Assignment\ProjectManagementY2-2223\app\__init__.py:71]
+2023-01-06 14:07:12,223 INFO: Template - Name startup [in C:\Users\fayee\OneDrive\Desktop\Applied Computing Year 2\Project Management and Development\Assignment\ProjectManagementY2-2223\app\__init__.py:71]
+2023-01-23 13:37:44,207 INFO: Template - Name startup [in C:\Users\fayee\OneDrive\Desktop\Applied Computing Year 2\Project Management and Development\Assignment\ProjectManagementY2-2223\app\__init__.py:71]
+2023-01-23 13:38:28,723 INFO: Template - Name startup [in C:\Users\fayee\OneDrive\Desktop\Applied Computing Year 2\Project Management and Development\Assignment\ProjectManagementY2-2223\app\__init__.py:71]
+2023-01-23 13:42:59,649 INFO: Template - Name startup [in C:\Users\fayee\OneDrive\Desktop\Applied Computing Year 2\Project Management and Development\Assignment\ProjectManagementY2-2223\app\__init__.py:71]
+2023-01-23 13:50:36,466 INFO: Template - Name startup [in C:\Users\fayee\OneDrive\Desktop\Applied Computing Year 2\Project Management and Development\Assignment\ProjectManagementY2-2223\app\__init__.py:71]
+2023-01-23 13:50:45,316 INFO: Template - Name startup [in C:\Users\fayee\OneDrive\Desktop\Applied Computing Year 2\Project Management and Development\Assignment\ProjectManagementY2-2223\app\__init__.py:71]
+2023-01-23 13:51:51,994 INFO: Template - Name startup [in C:\Users\fayee\OneDrive\Desktop\Applied Computing Year 2\Project Management and Development\Assignment\ProjectManagementY2-2223\app\__init__.py:71]
+2023-01-27 12:33:42,523 INFO: Template - Name startup [in C:\Users\fayee\OneDrive\Desktop\Applied Computing Year 2\Project Management and Development\Assignment\ProjectManagementY2-2223\app\__init__.py:71]
+2023-01-27 13:48:06,696 INFO: Template - Name startup [in C:\Users\fayee\OneDrive\Desktop\Applied Computing Year 2\Project Management and Development\Assignment\ProjectManagementY2-2223\app\__init__.py:71]
+2023-01-27 14:24:43,751 INFO: Template - Name startup [in C:\Users\fayee\OneDrive\Desktop\Applied Computing Year 2\Project Management and Development\Assignment\ProjectManagementY2-2223\app\__init__.py:71]
+2023-01-27 14:24:54,034 INFO: Template - Name startup [in C:\Users\fayee\OneDrive\Desktop\Applied Computing Year 2\Project Management and Development\Assignment\ProjectManagementY2-2223\app\__init__.py:71]
+2023-01-27 14:26:30,919 INFO: Template - Name startup [in C:\Users\fayee\OneDrive\Desktop\Applied Computing Year 2\Project Management and Development\Assignment\ProjectManagementY2-2223\app\__init__.py:71]
+2023-01-27 14:26:43,536 INFO: Template - Name startup [in C:\Users\fayee\OneDrive\Desktop\Applied Computing Year 2\Project Management and Development\Assignment\ProjectManagementY2-2223\app\__init__.py:71]
+2023-01-27 14:29:38,333 INFO: Template - Name startup [in C:\Users\fayee\OneDrive\Desktop\Applied Computing Year 2\Project Management and Development\Assignment\ProjectManagementY2-2223\app\__init__.py:71]

@@ -28,6 +28,7 @@
                 <li><a href="{{ url_for('main.index') }}" >Home</a></li>
                 <li><a href="{{ url_for('main.pricing') }}" >Pricing</a></li>
                 <li><a href="{{ url_for('main.help') }}" >Help</a></li>
+                <li><a href="{{ url_for('main.contact') }}" >Contact</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 {% if current_user.is_authenticated %}
@@ -37,8 +38,13 @@
                             <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="{{ url_for('main.account') }}" >Account</a></li>
+                            <li><a href="{{ url_for('main.account', username=current_user.username) }}" >Account</a></li>
+                            <li><a href="{{ url_for('main.admin_users') }}" >Users</a></li>
+                            <li><a href="{{ url_for('main.certify') }}" >Certify</a></li>
                             <li><a href="{{ url_for('auth.logout') }}" >Logout</a></li>
+
+                            
+
                         </ul>
                     </li>
                 {% else %}
@@ -70,10 +76,7 @@
         {# application content needs to be provided in the app_content block #}
         {% block app_content %}{% endblock %}
     </div>
-    <footer>
-        <li><a href="{{ url_for('main.products') }}" >products</a></li>
-        <li><a href="{{ url_for('main.aboutus') }}" >aboutus</a></li>
-    </footer>
+    
     
         
     
@@ -92,7 +95,33 @@
             });
         }, 3000);
     </script>
+
+    
+    
+    <div class="footer-basic">
+        <footer>
+            <div class="social">
+                <a href="https://www.facebook.com/facebook/">
+                    <img src="{{url_for('static', filename='img/facebook.png')}}" alt="Facebook" style="width: auto; margin:auto;">
+                </a>
+                <a href="https://twitter.com/">
+                    <img src="{{url_for('static', filename='img/twitter.png')}}" alt="Twitter" style="width: auto; margin:auto;">
+                </a>
+            </div>
+            <ul class="list-inline">
+                <li><a href="{{ url_for('main.index') }}" >Home</a></li>
+                <li><a href="{{ url_for('main.pricing') }}" >Pricing</a></li>
+                {% if current_user.is_authenticated %}
+                <li><a href="{{ url_for('main.account', username=current_user.username) }}" >Account</a></li>
+                <li><a href="{{ url_for('main.admin_users') }}" >Users</a></li>
+                {% else %}
+                <li><a href="{{ url_for('auth.login') }}" >Login</a></li>
+                {% endif %}
+                <li><a href="{{ url_for('main.certify') }}" >Certify</a></li>
+                <li><a href="{{ url_for('main.contact') }}" >Contact</a></li>
+                <li><a href="{{ url_for('main.help') }}" >Help</a></li>
+            </ul>
+            <p class="copyright">Smart Intelligence Courses © 2018</p>
+        </footer>
+    </div>
 {% endblock %}
-<div class="footer"> 
-    <a href="{{ url_for('main.contact') }}" >Contact Us</a>
-</div>

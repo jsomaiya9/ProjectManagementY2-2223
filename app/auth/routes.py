@@ -3,7 +3,7 @@ from flask import Blueprint, render_template, flash, \
 from app.auth.forms import LoginForm, RegistrationForm, \
                             ResetPasswordForm,ResetPasswordRequestForm
 from flask_login import current_user, login_user, logout_user, login_required
-from app.models import User
+from app.models import User, Profile
 from app import db
 from werkzeug.urls import url_parse
 from app.auth.email import send_password_reset_email
@@ -24,7 +24,19 @@ def login():
         next_page = request.args.get('next')
         if not next_page or url_parse(next_page).netloc != '':
             next_page = url_for('main.index')
+        profile = Profile.query.filter_by(user_id = user.id).first()
+        if profile is None:
+            profile = Profile(
+                user_id = user.id,
+                member_type = "None",
+                is_verified = False
+            )
+            db.session.add(profile)
+            db.session.commit()
+        
         flash("You are now signed in!", "success")
+
+
         return redirect(next_page)
     return render_template('auth/login.html', title='Login', form=form)
 
@@ -38,7 +50,8 @@ def register():
             username=form.username.data, 
             email=form.email.data,
             first_name=form.first_name.data.lower(),
-            last_name=form.last_name.data.lower()
+            last_name=form.last_name.data.lower(),
+            user_type="CUS"
         )
         user.set_password(form.password.data)
         db.session.add(user)

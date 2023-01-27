@@ -1,20 +1,39 @@
 {% extends "base.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
 
 
 {% block app_content %}
 
 <h2>My Account </h2>
 <p></p>
-<label for="fname">First name: </label>
-<input type="text" id="fname" name="fname" value="Steve" disabled><br>
-<label for="lname">Last name:  </label>
-<input type="text" id="lname" name="lname" value="Rogers" disabled><br>
-<label for="address">Address:  </label>
-<input type="street" id="address" name="address" value="66 Charles Street" disabled><br>
-<label for="dob">Date of Birth:  </label>
-<input type="date" id="dob" name="dob" value="06/09/1964" disabled><br>
-<label for="pnumber">Phone number:  </label>
-<input type="number" id="pnumber" name="pnumber" value="0123456789" disabled><br>
-<label for="email">Email:  </label>
-<input type="email" id="email" name="email" value="Stevie@gmail.com" disabled><br>
+First Name: {{ profile.user.first_name }}
+<br> 
+Last Name: {{ profile.user.last_name }}
+<br>
+Username: {{ profile.user.username }} 
+<br>
+Email: {{ profile.user.email }}
+<br>
+{% if profile.user.user_type == 'ADM' %}
+{% else %}
+Member Type: {{ profile.member_type }}
+<br>
+{% endif %}
+{% if profile.user.user_type == 'ADM' %}
+User Type: {{ profile.user.user_type }}
+<br>
+{% endif %}
+
+{% if profile.member_type == 'CSP' %}
+Experience/Qualifications: {{ profile.user.exp_qual }}
+{% endif %}
+<br>
+{% if current_user.user_type == 'CSP' %}
+<a href="{{url_for('main.exp_edit', id=current_user.id) }}">Edit Experience</a>
+<br>
+{% else %}
+{% endif %}
+{% if profile.member_type == 'CSP' %}
+Rating: {{ profile.user.rating }}
+{% endif %}
 {% endblock %}

@@ -6,6 +6,7 @@ from flask import current_app
 from flask_login import UserMixin
 from flask_login import LoginManager # new code entry
 from werkzeug.security import generate_password_hash, check_password_hash
+from flask import Flask
 
 # timestamp to be inherited by other class models
 class TimestampMixin(object):
@@ -24,6 +25,10 @@ class User(db.Model, TimestampMixin, UserMixin):
     password_hash = db.Column(db.String(128))
     first_name = db.Column(db.String(20), nullable=False)
     last_name = db.Column(db.String(20), nullable=False)
+    user_type = db.Column(db.String(20), default='customer')
+    exp_qual = db.Column(db.String(128))
+    rating = db.Column(db.String(50))
+    user_profile = db.relationship('Profile', backref = 'user')
 
     # print to console username created
     def __repr__(self):
@@ -49,3 +54,14 @@ class User(db.Model, TimestampMixin, UserMixin):
         except:
             return
         return User.query.get(id)
+
+
+
+class Profile (db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    member_type = db.Column(db.String(50), nullable=False)
+    is_verified = db.Column(db.Boolean, nullable=False)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), unique=True) 
+
+    def __repr__(self):
+        return '<Profile {}>'.format(self.member_type)
